@@ -1,0 +1,46 @@
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    background-color: black;
+}
+
+/* Estilos para la imagen de portada */
+#logo {
+    width: 50%;
+    margin-left: 3rem;
+}
+
+/* Estilos para las cards */
+.card {
+    opacity: 0; /* Comenzar con opacidad 0 */
+    transform: translateY(30px);
+    transition: opacity 2s ease, transform 2s ease !important;
+        border-color: #00ff7f; 
+    border-width: .1rem;
+}
+
+.card:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); 
+    border-color: #00ff7f; 
+    border-width: .2rem;
+}
+
+/* Animación fade-in inicial */
+.fade-in {
+    opacity: 1; 
+    transform: translateY(0);
+    animation: fadeIn 1.5s forwards;
+}
+
+/* Definir la animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Iniciar con opacidad 0 */
+        transform: translateY(20px); /* Mover hacia abajo */
+    }
+    to {
+        opacity: 1; /* Finalizar con opacidad 1 */
+        transform: translateY(0); /* Mover a la posición original */
+    }
+}
